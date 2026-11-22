@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:versionCode="27"
+    android:versionName="2.3.0"
+    android:compileSdkVersion="31"
+    android:compileSdkVersionCodename="12"
+    package="com.saucelabs.mydemoapp.android"
+    platformBuildVersionCode="31"
+    platformBuildVersionName="12">
+
+    <uses-sdk
+        android:minSdkVersion="21"
+        android:targetSdkVersion="31" />
+
+    <uses-permission
+        android:name="android.permission.CAMERA" />
+
+    <uses-permission
+        android:name="android.permission.INTERNET" />
+
+    <uses-permission
+        android:name="android.permission.FOREGROUND_SERVICE" />
+
+    <uses-permission
+        android:name="android.permission.WAKE_LOCK" />
+
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <uses-permission
+        android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <uses-permission
+        android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <uses-permission
+        android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <uses-permission
+        android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <uses-permission
+        android:name="android.permission.USE_BIOMETRIC" />
+
+    <uses-permission
+        android:name="android.permission.USE_FINGERPRINT" />
+
+    <application
+        android:theme="@ref/0x7f110008"
+        android:label="@ref/0x7f100024"
+        android:icon="@ref/0x7f0e0000"
+        android:name="com.saucelabs.mydemoapp.android.MyApplication"
+        android:debuggable="true"
+        android:allowBackup="true"
+        android:largeHeap="true"
+        android:supportsRtl="true"
+        android:roundIcon="@ref/0x7f0e0002"
+        android:appComponentFactory="androidx.core.app.CoreComponentFactory">
+
+        <activity
+            android:name="com.saucelabs.mydemoapp.android.view.activities.SplashActivity"
+            android:exported="true">
+
+            <intent-filter>
+
+                <action
+                    android:name="android.intent.action.MAIN" />
+
+                <category
+                    android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.saucelabs.mydemoapp.android.view.activities.MainActivity"
+            android:screenOrientation="1"
+            android:configChanges="0x4a4"
+            android:windowSoftInputMode="0x2" />
+
+        <activity
+            android:name="com.saucelabs.mydemoapp.android.view.activities.DebugCrashActivity"
+            android:screenOrientation="1"
+            android:configChanges="0x4a4"
+            android:windowSoftInputMode="0x2" />
+
+        <activity
+            android:name="com.saucelabs.mydemoapp.android.view.activities.VirtualUsbActivity"
+            android:screenOrientation="1"
+            android:configChanges="0x4a4"
+            android:windowSoftInputMode="0x2" />
+
+        <activity
+            android:theme="@ref/0x103006e"
+            android:name="com.testfairy.activities.ProvideFeedbackActivity"
+            android:configChanges="0x480" />
+
+        <service
+            android:name="androidx.room.MultiInstanceInvalidationService"
+            android:exported="false"
+            android:directBootAware="true" />
+
+        <service
+            android:name="androidx.camera.core.impl.MetadataHolderService"
+            android:enabled="false"
+            android:exported="false">
+
+            <meta-data
+                android:name="androidx.camera.core.impl.MetadataHolderService.DEFAULT_CONFIG_PROVIDER"
+                android:value="androidx.camera.camera2.Camera2Config$DefaultProvider" />
+        </service>
+
+        <activity
+            android:theme="@ref/0x1030010"
+            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+            android:exported="false" />
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@ref/0x7f0b0008" />
+
+        <provider
+            android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer"
+            android:exported="false"
+            android:multiprocess="true"
+            android:authorities="com.saucelabs.mydemoapp.android.lifecycle-process" />
+    </application>
+</manifest>
