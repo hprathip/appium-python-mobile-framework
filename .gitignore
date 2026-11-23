@@ -9,6 +9,7 @@ venv/
 
 # --- pytest ---
 .pytest_cache/
+test-results/
 
 # --- APIDemos mobile app ---
    apps/*.apk
